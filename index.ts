@@ -92,8 +92,8 @@ const testApi = async (discos:LD[]) => {
     
     const DiscosActualizados = await (await axios.get("http://localhost:3000/ld")).data;
 
-    const equipo: LD = DiscosActualizados.find((disco:LD) => disco.filmName === "El contable");
-    const id = equipo.id
+    const disco: LD = DiscosActualizados.find((disco:LD) => disco.filmName === "El contable");
+    const id = disco.id
     console.log("\nDISCOS ACTUALIZADOS CON EL NUEVO DISCO" + "\n")
     console.log(DiscosActualizados)
 
